@@ -1,0 +1,45 @@
+# Application configuration
+
+database:
+  local_db:
+    host: "localhost"
+    port: 5432
+    user: "postgres"
+    db: "numerical_engineering"
+    min_pool_size: 1
+    max_pool_size: 5
+    timeout: 10
+  remote_db:
+    host: ""
+    port: 5432
+    user: ""
+    db: ""
+    min_pool_size: 1
+    max_pool_size: 5
+    timeout: 10
+
+infra:
+  azure:
+    deployment_name: "gpt-5.1"
+    endpoint: ""
+    api_version: ""
+    context_window_size: 128000
+
+retrieval:
+  table_retrieval_size: 10
+  table_column_retrieval_size: 100
+  table_retrieval_score_threshold: null
+
+runtime:
+  project_id: "demo"
+  retrieval_query: ""
+  enable_column_pruning: false
+  unique_values_concurrency: 4
+
+summary:
+  long_term:
+    embedding_dim: 1536
+    model: "text-embedding-3-small"
+    embeddings_azure_endpoint: ""
+    embeddings_deployment_name: "text-embedding-ada-002"
+    embeddings_api_version: ""
